@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+    
+    <style>
+        body{
+            margin: 0;
+            background-color:#000;
+        }
+        div{
+            width:500px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        //REFERÊNCIA E ESTILO DO CANVAS
+        var cnv = document.createElement('canvas')
+        cnv.width = '500'
+        cnv.height = '500'
+        cnv.style.border = '1px solid #000'
+
+        //COLOCA O CANVAS DENTRO DA DIV
+        document.querySelector('div').appendChild(cnv)
+
+        //TORNA A CANVAS DESENHÁVEL
+        var ctx = cnv.getContext('2d')
+    </script>
+</body>
+<script src="functions.js"></script>
+<script src="classes.js"></script>
+<script src="main.js"></script>
+</html>
