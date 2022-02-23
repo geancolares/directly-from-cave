@@ -67,6 +67,19 @@ function update(){
         ctx.fillStyle = 'rgb('+pointRgbs[i]+100+','+0+','+0+')'
         ctx.fillRect(visiblePoints[i][0]+offsetx,visiblePoints[i][1]+offsety,2,2)
     }
+
+    pointIntensities = []
+    visiblePoints.forEach(x=>{
+        pointIntensities.push(pointIntensity(lightPoint,x))
+    })
+
+    minIntensity = Math.min(...pointIntensities)
+    maxIntensity = Math.max(...pointIntensities)
+
+    pointRgbs = []
+    pointIntensities.forEach(x=>{
+        pointRgbs.push(pointRgb(x,minIntensity,maxIntensity))
+    })
 }
 
 init()
