@@ -1,7 +1,7 @@
 var points = visiblePoints = pointIntensities = pointRgbs = []
 
 const Z_VECTOR = [0,0,-1]
-var lightPoint = [200,-200,-2000]
+var lightPoint = [50,-50,-2000]
 
 var blockSize = 2
 var xPos = yPos = 0
